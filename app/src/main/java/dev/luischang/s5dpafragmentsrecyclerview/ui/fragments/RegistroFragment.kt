@@ -47,7 +47,18 @@ class RegistroFragment : Fragment() {
         }
 
         btnSave.setOnClickListener {
+            var fullNameValue = etFullName.text
+            var emailValue = etEmail.text
+            val intSelectBUtton: Int = rgGender!!.checkedRadioButtonId
+            val radioButton: RadioButton = view.findViewById(intSelectBUtton)
+            val genderValue = radioButton.text
 
+            Toast.makeText(requireContext(),"Full Name: $fullNameValue",Toast.LENGTH_LONG ).show()
+            Toast.makeText(requireContext(),"Email: $emailValue",Toast.LENGTH_LONG ).show()
+            Toast.makeText(requireContext(),"Gender: $genderValue",Toast.LENGTH_LONG ).show()
+            Toast.makeText(requireContext(),"Country: $spnCountryValue",Toast.LENGTH_LONG ).show()
+            Toast.makeText(requireContext(),"License?: ${chkLicense.isChecked}",Toast.LENGTH_LONG ).show()
+            Toast.makeText(requireContext(),"Car?: ${chkCar.isChecked}",Toast.LENGTH_LONG ).show()
         }
 
 
